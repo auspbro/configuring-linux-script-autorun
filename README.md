@@ -91,17 +91,18 @@ changes.
                       
    * c. Press Ctrl + X to exit the file and Y when prompted to save your changes.
   ------------------------------------------------------------------------------------
-  Auto run test script on Ubuntu 
-  ————————————————————————————————————————————————————————————————————————————————————
-  1. 编辑 sudo nano /etc/default/grub 文件修改 GRUB_TIMEOUT=10 -> GRUB_TIMEOUT=10, 然后执行 sudo update-grub
+
+## Auto run test script on Ubuntu 
+
+* 编辑 sudo nano /etc/default/grub 文件修改 GRUB_TIMEOUT=10 -> GRUB_TIMEOUT=10, 然后执行 sudo update-grub
   
-  2. 更改 Ubuntu Boot Entry 默认启动顺序
-     编辑/boot/grub/grub.cfg,修改 set default="${saved_entry}" 为 set default="0"
+* 更改 Ubuntu Boot Entry 默认启动顺序
+  * 编辑/boot/grub/grub.cfg,修改 set default="${saved_entry}" 为 set default="0"
      
-  3. 添加开机自动执行脚本
-     sudo nano ~/.bashrc, 在.bashrc文件最后一行新增需要开机启动自动执行的 bash 指令 （例：sudo bash /home/diag/..../AMD_Diag_Go.sh）
+* 添加开机自动执行脚本
+  * sudo nano ~/.bashrc, 在.bashrc文件最后一行新增需要开机启动自动执行的 bash 指令 （例：sudo bash /home/diag/..../AMD_Diag_Go.sh）
      
-  4. How to avoid the "S to skip" message on ubuntu boot?如何避免Ubuntu系统启动时停在某个地方按某个键跳过
-     add the option nobootwait to your /etc/fstab  /boot/grub/grub.cfg
+* How to avoid the "S to skip" message on ubuntu boot?如何避免Ubuntu系统启动时停在某个地方按某个键跳过
+  * add the option nobootwait to your /etc/fstab  /boot/grub/grub.cfg
 
   
